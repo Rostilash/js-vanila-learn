@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name": "LD01 lOUNGE CHAIR",
+        "price": 200,
+        "image": "img/chair1.png"
+    }
+    {
+        "id": 2,
+        "name": "LD01 lOUNGE CHAIR",
+        "price": 250,
+        "image": "img/chair1.png"
+    }
+    {
+        "id": 3,
+        "name": "LD01 lOUNGE CHAIR",
+        "price": 290,
+        "image": "img/chair1.png"
+    }
+    {
+        "id": 4,
+        "name": "LD01 lOUNGE CHAIR",
+        "price": 300,
+        "image": "img/chair1.png"
+    }
+    {
+        "id": 5,
+        "name": "LD01 lOUNGE CHAIR",
+        "price": 500,
+        "image": "img/chair1.png"
+    }
+    {
+        "id": 6,
+        "name": "LD01 lOUNGE CHAIR",
+        "price": 210,
+        "image": "img/chair1.png"
+    }
+    {
+        "id": 7,
+        "name": "LD01 lOUNGE CHAIR",
+        "price": 280,
+        "image": "img/chair1.png"
+    }
+    {
+        "id": 8,
+        "name": "LD01 lOUNGE CHAIR",
+        "price": 150,
+        "image": "img/chair1.png"
+    }
+    
+]

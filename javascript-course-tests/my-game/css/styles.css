@@ -1,0 +1,519 @@
+/* Загальні стилі */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Контейнер для центрування контенту */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Шапка сайту */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.header nav ul li {
+    margin: 0 20px;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Основна частина сайту */
+main {
+    padding: 40px 0;
+}
+
+.block {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; /* Використовуємо flexbox для розташування зображення та тексту */
+    flex-wrap: wrap;
+}
+
+.book-image-container {
+    flex: 0 0 250px; /* Задаємо фіксовану ширину для зображення */
+    margin-right: 20px; /* Між зображенням та текстом буде відступ */
+}
+
+.book-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.book-text {
+    flex: 1; /* Залишаємо текстовій частині більше місця */
+}
+
+.book-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.book-text p {
+    font-size: 1rem;
+}
+
+/* Футер */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer p {
+    font-size: 1rem;
+}
+/* Стилі для зворотного відліку */
+.countdown {
+    font-size: 3rem; /* Розмір шрифта */
+    font-weight: bold; /* Жирний шрифт */
+    color: #ff6600; /* Колір тексту */
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-in-out; /* Анімація при завантаженні */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .countdown {
+        font-size: 2rem; /* Зменшимо шрифт на мобільних пристроях */
+    }
+}
+#calendar-container {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    max-width: 400px;
+}
+#calendar-container span {
+	color: black;
+}
+
+#calendar-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#calendar-table td, #calendar-table th {
+    width: 14.28%;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+	color: black;
+}
+
+#calendar-table .today {
+    background-color: #ff0; /* Виділення сьогоднішнього дня */
+    color: #fff;
+    font-weight: bold;
+}
+
+button {
+    cursor: pointer;
+    margin: 5px;
+}
+
+#close-calendar-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+/* Стилі для таймера */
+.timer-container {
+    margin-top: 20px;
+}
+
+label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+input[type="number"] {
+    width: 60px;
+    font-size: 18px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+}
+
+#timer-display {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Пупап вікно */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+}
+
+.popup-content p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#close-popup-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#close-popup-btn:hover {
+    background-color: #e53935;
+}
+
+/* Загальні стилі для калькулятора */
+#calculator-popup {
+
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Стиль для дисплея калькулятора */
+#calculator-display {
+    width: 100%;
+    height: 60px;
+    font-size: 2.5em;
+    text-align: right;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+/* Стилі для кнопок калькулятора */
+#calculator-popup div button {
+    /*padding: 20px;
+    font-size: 1.6em;*/
+    border: 2px solid #333;
+    background-color: #333;
+    color: white;
+    margin: 5px;
+    border-radius: 10px;
+    width: 22.5%;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Анімація при натисканні */
+    box-sizing: border-box;
+}
+
+/* Кнопки при наведенні */
+#calculator-popup button:hover {
+    background-color: #444;
+    transform: scale(1.1); /* Легке збільшення кнопки */
+}
+
+/* Кнопки при натисканні */
+#calculator-popup button:active {
+    background-color: #555;
+    transform: scale(1.05); /* Легке зменшення кнопки при натисканні */
+}
+
+/* Стилі для кнопок операцій (+, -, ×, ÷) */
+#calculator-popup button[data-value='+'],
+#calculator-popup button[data-value='-'],
+#calculator-popup button[data-value='×'],
+#calculator-popup button[data-value='÷'] {
+    background-color: #ff9f00;
+}
+
+/* Стилі для кнопки "C" (очистити) */
+#calculator-popup #clear-btn {
+    background-color: #ff4040;
+}
+
+/* Стиль для кнопки "=" */
+#calculator-popup #equals-btn {
+    background-color: #4caf50;
+    width: 22.5%; /* Кнопка рівно по ширині */
+    border-radius: 10px;
+}
+
+/* Стиль для кнопки "Закрити" */
+#calculator-popup #close-calculator-btn {
+    background-color: #555;
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#calculator-popup #close-calculator-btn:hover {
+    background-color: #666;
+}
+
+/* Сегмент кнопок, щоб "+" був поруч з "-" */
+#calculator-popup button#button-plus {
+    order: 1; /* Кнопка "+" йде після "-" */
+}
+
+#calculator-popup button#button-minus {
+    order: 0; /* Кнопка "-" йде перед "+" */
+}
+
+/* Кнопки для очищення та рівня
+#calculator-popup #clear-btn, #equals-btn {
+    width: 20%;
+    margin-top: 10px;
+}
+ */
+
+ /* Styles for the game */
+ 
+#container {
+  display: grid;
+  grid-template-columns: repeat(5, 50px); /* 5 квадратів у ряд */
+  gap: 10px;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+}
+
+.square.player1 {
+  background-color: red;
+  color: white;
+}
+
+.square.player2 {
+  background-color: blue;
+  color: white;
+}
+.square.player1.player2.balance{
+  background: linear-gradient(to right, red 50%, blue 50%);
+  color: white;
+  border: 2px solid darkorchid;
+}
+.input{
+	padding: 10px 30px;
+	font-size: 25px;
+	margin-bottom: 20px;
+}
+.wrapper{
+	background-color: orange `;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+.d1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 300px;
+	height: 300px;
+	border: 1px solid #fff;
+ } 
+.d2{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 200px;
+	border: 1px solid #fff;
+ }
+.d3{
+	width: 100px;
+	height: 100px;
+	border: 1px solid #fff;
+ }
+ .model{
+	 width: 50rem;
+	 position: fixed;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 padding: 2rem;
+	 border: 0.2rem solid #67686e
+	 
+ }
+ 
+ .img{
+	height: 700px;
+	width: 700px;
+ }
+ 
+/* Адаптивний дизайн для мобільних пристроїв */
+
+/* Медіа-запит для екрану з шириною менше 768px (мобільні пристрої) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Зменшуємо ширину контейнера */
+    }
+
+    .header h1 {
+        font-size: 2rem; /* Зменшуємо розмір заголовка */
+    }
+
+    .header nav ul {
+        flex-direction: column; /* Перехід на вертикальне розташування меню */
+        margin-top: 20px;
+    }
+
+    .header nav ul li {
+        margin: 10px 0; /* Збільшуємо відстань між пунктами меню */
+    }
+
+    .block h2 {
+        font-size: 1.5rem; /* Зменшуємо розмір заголовків блоків */
+    }
+
+    .block p {
+        font-size: 1rem; /* Зменшуємо розмір тексту в блоках */
+    }
+
+    .footer p {
+        font-size: 0.9rem; /* Зменшуємо шрифт в футері */
+    }
+
+    /* Для маленьких екранів (менше ніж 480px) */
+    .book-image-container {
+        flex: 0 0 100%; /* Зображення займає всю ширину на маленьких екранах */
+        margin-bottom: 20px; /* Відступ знизу для зображення */
+    }
+}
+
+/* Медіа-запит для екрану з шириною менше 480px (мобільні пристрої з маленьким екраном) */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem; /* Зменшуємо розмір заголовка ще більше */
+    }
+
+    .header nav ul li {
+        margin: 8px 0; /* Зменшуємо відстань між пунктами меню */
+    }
+
+    .block {
+        padding: 15px; /* Зменшуємо відступи в блоках */
+    }
+
+    .book-text h2 {
+        font-size: 1.3rem; /* Зменшуємо заголовки в блоках */
+    }
+
+    .book-text p {
+        font-size: 0.9rem; /* Зменшуємо розмір тексту */
+    }
+
+    .footer p {
+        font-size: 0.8rem; /* Зменшуємо розмір шрифту футера */
+    }
+}

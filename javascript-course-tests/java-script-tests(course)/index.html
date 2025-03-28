@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Попап Віконце </title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    
+    <header class="header">
+		<div class="burger">
+		<span></span>
+		<span></span>
+		<span></span>
+		</div>
+		<nav>
+		<div class="block">
+				<span class="span1"></span>
+				<h2> Наприклад, різні види товарів, тварин чи рослин», — коментує експерт. </h2>
+		</div>
+				<a href="">Веб-розробник </a>
+				<a href="">Next.js</a>
+				<a href="">HTML</a>
+				<a href="">Angular</a>
+				<a href="">Node.js</a>а
+				<a href="">TypeScript</a>
+			<button class="close"> &#10006 </button>
+		</nav>
+			<div class="overlay2 hidden"> </div>
+	</header>
+  
+  <main>
+	<div class="container">
+		<div class="modal hidden">
+			<div class="modal__block">
+				<h1 class="modal__title">Заголовок модельного вікна</h1>
+				<button class="modal__close modal__x"> &#10006  </button>
+			</div>
+			<p class="modal__descr">
+				Щодо українського еквівалента слова вид, мовознавець підкреслив, що не слід вживати вираз який гарний вид із вікна.
+				Замість цього бажано використовувати фразу який гарний краєвид із вікна. «Вид — це те саме, що й різновид. 
+				Наприклад, різні види товарів, тварин чи рослин», — коментує експерт.
+			</p>
+				  <div class="modal__images">
+					<img class="img" src="https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?ixid=2yJhcHBfaWQiOjEyMDd9" alt="">
+					<img class="img" src="https://picsum.photos/700/700" alt="">
+				</div>
+				<div class="modal__random-image">
+				<button class="modal__btn-random">Оновити зображення</button>
+				<button class="modal__close modal__close--btn">Закрити</button>
+				</div>
+		</div>	
+		<div class="overlay hidden"></div>
+	</div>
+    </main>
+
+	<script src="js/massive.js"></script>
+</body>
+</html>

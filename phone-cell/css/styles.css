@@ -1,0 +1,280 @@
+/* Загальні стилі */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+hyml{
+	font-size: 62.5%;
+}
+body {
+	font-weight: 400;
+	font-style: normal;
+	color: white;
+	background-color: #111;	
+    font-family: "Roboto", serif;
+	font-size: 1.7rem;
+    line-height: 1.6;
+    /* background-color: #f4f4f4; */
+}
+header{
+height: 12rem;
+padding: 1rem;
+}
+.burger span{
+	display: block;
+	width: 3rem;
+	height: 0.2rem;
+	background-color: #fff;
+}
+.burger {
+	position: relative;
+	z-index: 11;
+	display: flex;
+	flex-direction: column; 
+	row-gap: 0.8rem;
+	cursor: pointer;
+}
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 30rem;
+	background-color: #f7f9fa;
+	padding: 2rem 1.6rem;
+	z-index: 11;
+	transform: translateX(-39rem);
+	opacity :0;
+	transition: all 0.5s; 
+	height: 100%;
+}
+.add {
+	transform: translateX(0rem);
+	opacity: 1;
+}
+.block{
+	display: flex;
+	align-items: center;
+	column-gap: 2rem;
+	margin-bottom: 2rem;
+}
+.span1{
+	display: block;
+	width: 5rem;
+	height: 5rem;
+	background-color: #111;
+	border-radius: 50%;
+}
+.block h2 {
+	font-size: 1.3rem;
+	color: #2d2f31;
+	max-width: 14rem;
+}
+nav a{
+	display:block;
+	padding:0.8rem 1.6rem;
+	text-decoration: none;
+	font-size: 2rem;
+	color: #2d2f31;
+}
+.close{
+	position: absolute;
+	top: 2rem;
+	right: -7rem;
+	font-size: 2rem;
+	background-color: #f7f9fa;
+	border: none;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+}
+.overlay2{
+	 position: fixed;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 background-color: #67686e63;
+	 z-index: 10;
+}
+
+button{
+	display: block;
+	cursor: pointer;
+	border: none;
+}
+/* Контейнер для центрування контенту */
+.container {
+    width: 45%;
+    margin: 0 auto;
+}
+.input{
+	padding: 10px 30px;
+	font-size: 25px;
+	margin-bottom: 20px;
+}
+.wrapper{
+	background-color: orange `;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+.modal{
+	width: 50rem;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 2rem;
+	border: 0.2rem solid #67686e;
+	z-index: 2;
+ }
+.modal__block {
+	 display: flex;
+	 align-items: center;
+	 justify-content: space-between;
+	 margin-bottom: 1.5rem;
+ }
+.modal__title{
+	 font-size: 1.8rem;
+ }
+.modal__x{
+	 background-color: transparent;
+	 color: white;
+	 font-size: 2rem;
+ }
+.modal__descr{
+	line-height: 1.5rem;
+	margin-bottom: 2rem;
+}
+.modal__images{
+	max-width: 100%;
+	height: 500px;
+	margin-bottom: 2rem;
+ }
+.img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 0.5rem;
+ }
+.modal__random-image {
+display: flex;
+justify-content: flex-end;
+column-gap: 1rem;
+}
+.modal__random-image button{ 
+	padding: 1rem;
+	font-size: 1.6rem;
+	font-weight: 700;
+	border-radius: 0.5rem;
+}
+.modal__btn-random{
+	background-color: #67686e;
+	color: white;
+	transition: all 0.7s;
+}
+.modal__btn-random:hover{
+	background-color: yellow;
+	color: black;
+}
+.modal__close--btn{
+	background-color: #67686e;
+	color: white;
+	transition: all 0.3s;
+}
+.modal__close--btn:hover{
+	background-color: black;
+}
+.btn{
+	position: relative;	
+	padding: 1rem;
+	background-color: gray;
+	color:white;
+	margin: 4rem 2rem;
+	border-radius: 2rem;
+	font-size:2rem;
+	z-index: 2;
+}
+.overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #301a1a96;
+	z-index: 1;
+}
+.hidden{
+	display: none;
+}
+
+
+ 
+/* Адаптивний дизайн для мобільних пристроїв */
+
+/* Медіа-запит для екрану з шириною менше 768px (мобільні пристрої) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Зменшуємо ширину контейнера */
+    }
+
+    .header h1 {
+        font-size: 2rem; /* Зменшуємо розмір заголовка */
+    }
+
+    .header nav ul {
+        flex-direction: column; /* Перехід на вертикальне розташування меню */
+        margin-top: 20px;
+    }
+
+    .header nav ul li {
+        margin: 10px 0; /* Збільшуємо відстань між пунктами меню */
+    }
+
+    .block h2 {
+        font-size: 1.5rem; /* Зменшуємо розмір заголовків блоків */
+    }
+
+    .block p {
+        font-size: 1rem; /* Зменшуємо розмір тексту в блоках */
+    }
+
+    .footer p {
+        font-size: 0.9rem; /* Зменшуємо шрифт в футері */
+    }
+
+    /* Для маленьких екранів (менше ніж 480px) */
+    .book-image-container {
+        flex: 0 0 100%; /* Зображення займає всю ширину на маленьких екранах */
+        margin-bottom: 20px; /* Відступ знизу для зображення */
+    }
+}
+
+/* Медіа-запит для екрану з шириною менше 480px (мобільні пристрої з маленьким екраном) */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem; /* Зменшуємо розмір заголовка ще більше */
+    }
+
+    .header nav ul li {
+        margin: 8px 0; /* Зменшуємо відстань між пунктами меню */
+    }
+
+    .block {
+        padding: 15px; /* Зменшуємо відступи в блоках */
+    }
+
+    .book-text h2 {
+        font-size: 1.3rem; /* Зменшуємо заголовки в блоках */
+    }
+
+    .book-text p {
+        font-size: 0.9rem; /* Зменшуємо розмір тексту */
+    }
+
+    .footer p {
+        font-size: 0.8rem; /* Зменшуємо розмір шрифту футера */
+    }
+}
